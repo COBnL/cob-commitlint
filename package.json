@@ -1,0 +1,39 @@
+{
+  "name": "cob-commitlint",
+  "version": "0.0.0-semantically-released",
+  "description": "COB commitlint adapter following the commitlint format",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"No test specified\" && exit 0",
+    "lint": "eslint **/*.js",
+    "commitmsg": "commitlint -e $GIT_PARAMS",
+    "precommit": "npm run lint",
+    "semantic-release": "semantic-release pre && npm publish && semantic-release post"
+  },
+  "author": "brokenmass <massa84@gmail.com>",
+  "homepage": "https://github.com/brokenmass/cob-commitlint",
+  "repository": {
+    "type": "git",
+    "url": "git@github.com:brokenmass/cob-commitlint.git"
+  },
+  "license": "UNLICENSED",
+  "dependencies": {},
+  "devDependencies": {
+    "cob-commitizen": "^1.0.1",
+    "commitlint": "^5.2.3",
+    "eslint": "^4.1.1",
+    "eslint-config-canonical": "^9.2.0",
+    "husky": "^0.14.1",
+    "semantic-release": "^6.3.6"
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cob-commitizen"
+    }
+  },
+  "commitlint": {
+    "extends": [
+      "./index.js"
+    ]
+  }
+}
