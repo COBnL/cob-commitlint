@@ -1,6 +1,6 @@
 {
   "extends": [
-    "canonical",
+    "canonical"
   ],
   "root": true,
   "rules": {
